@@ -1,0 +1,6 @@
+BASE_URL=http://127.0.0.1:3000
+API_DOMAIN=https://cms.fournalist.com/v1
+PUBLICATION=1
+PRIMARY_SITE_ID=vue
+SITE_TITLE=VueJS
+SITE_DESCRIPTION=aaa
