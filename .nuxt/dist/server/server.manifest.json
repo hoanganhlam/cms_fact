@@ -1,0 +1,15 @@
+{
+  "entry": "server.js",
+  "files": {
+    "pages/_term/_taxonomy.js": "pages/_term/_taxonomy.js",
+    "pages/index.js": "pages/index.js",
+    "pages/posts/_id.js": "pages/posts/_id.js",
+    "server.js": "server.js"
+  },
+  "maps": {
+    "pages/_term/_taxonomy.js": "pages/_term/_taxonomy.js.map",
+    "pages/index.js": "pages/index.js.map",
+    "pages/posts/_id.js": "pages/posts/_id.js.map",
+    "server.js": "server.js.map"
+  }
+}

@@ -1,0 +1,23 @@
+[
+  {
+    "name": "posts-id",
+    "path": "/posts/:id?",
+    "component": "/Users/apple/Desktop/OpenSource/cms_pushfact/pages/posts/_id.vue",
+    "chunkName": "pages/posts/_id",
+    "_name": "_239856cc"
+  },
+  {
+    "name": "index",
+    "path": "/",
+    "component": "/Users/apple/Desktop/OpenSource/cms_pushfact/pages/index.vue",
+    "chunkName": "pages/index",
+    "_name": "_79e26bee"
+  },
+  {
+    "name": "term-taxonomy",
+    "path": "/:term/:taxonomy?",
+    "component": "/Users/apple/Desktop/OpenSource/cms_pushfact/pages/_term/_taxonomy.vue",
+    "chunkName": "pages/_term/_taxonomy",
+    "_name": "_833e53f0"
+  }
+]
