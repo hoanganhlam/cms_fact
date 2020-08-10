@@ -1,9 +1,7 @@
 const RestfulRepo = (app, item) => {
     let out = {
         list: async (query) => {
-            let q = {
-                publications: process.env.PUBLICATION
-            };
+            let q = {};
             Object.keys(query).forEach(field => {
                 if (Array.isArray(query[field])) {
                     q[field] = query[field].toString()
@@ -16,12 +14,13 @@ const RestfulRepo = (app, item) => {
                     res.results = []
                 }
                 return res
+            }).catch(e => {
+                console.log(e);
             });
         },
         create: async (body) => {
             return await app.$axios.$post(`/${item.space}/${item.endpoint}/`, {
-                ...body,
-                publications: [process.env.PUBLICATION]
+                ...body
             })
         },
         get: async (id, query) => {
@@ -89,27 +88,15 @@ const apis_module = [
         methods: []
     },
     {
-        space: 'cms',
+        space: `pub-${process.env.PUBLICATION}`,
         endpoint: 'posts',
         name: 'post',
         methods: []
     },
     {
-        space: 'cms',
-        endpoint: 'term-taxonomies',
-        name: 'taxonomy',
-        methods: []
-    },
-    {
-        space: 'global-cms',
+        space: `pub-${process.env.PUBLICATION}`,
         endpoint: 'taxonomies',
-        name: 'pub_taxonomy',
-        methods: []
-    },
-    {
-        space: 'global-cms',
-        endpoint: 'posts',
-        name: 'pub_post',
+        name: 'taxonomy',
         methods: []
     }
 ];

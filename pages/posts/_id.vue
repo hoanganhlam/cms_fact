@@ -7,7 +7,12 @@
         name: "MasterPagePost",
         async asyncData({$api, params}) {
             return {
-                post: await $api['pub_post'].get(params.id),
+                post: await $api['post'].get(params.id),
+            }
+        },
+        head() {
+            return {
+                title: this.post.title
             }
         }
     }

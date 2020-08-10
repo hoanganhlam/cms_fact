@@ -25,7 +25,7 @@ export default {
     ** See https://nuxtjs.org/api/configuration-head
     */
     head: {
-        titleTemplate: '%s - cms-base',
+        titleTemplate: '%s - pushfact.com',
         title: process.env.npm_package_name || '',
         meta: [
             {charset: 'utf-8'},
@@ -40,7 +40,8 @@ export default {
     ** Global CSS
     */
     css: [
-        '@/assets/scss/app.scss'
+        '@/assets/scss/app.scss',
+        '@mdi/font/css/materialdesignicons.css'
     ],
     /*
     ** Plugins to load before mounting the App
