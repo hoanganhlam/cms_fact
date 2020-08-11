@@ -18,11 +18,17 @@ body {
 
 .container {
     max-width: 925px !important;
+    padding: 0 1rem;
 }
 
 main.main {
     padding: 1.5rem 0;
     min-height: calc(100vh - 280px);
+}
+
+.footer {
+    background-color: #fafafa;
+    padding: 3rem 1.5rem 3rem;
 }
 
 .notification {
@@ -115,4 +121,34 @@ main.main {
 
 .facts {
     margin-bottom: 1.5rem;
+}
+
+.header {
+    .header-body {
+        padding: 1.5rem 0;
+        background: #50527a;
+
+    }
+
+    .navbar {
+        border-bottom: 1px solid #DDD;
+
+        .level {
+            width: 100%;
+        }
+    }
+
+    .logo {
+        max-width: 220px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .media-content {
+        overflow-x: unset;
+    }
+
+    .navbar {
+        padding: 1rem 0 0;
+    }
 }

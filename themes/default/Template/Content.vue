@@ -1,5 +1,12 @@
 <template>
     <div class="media fact">
+        <div class="media-left" v-if="vote">
+            <div class="vote" v-bind:class="{'is-active': value['vote_object']['is-voted']}">
+                <b-icon class="is-clickable" icon="chevron-up"></b-icon>
+                <div>{{value['vote_object']['total']}}</div>
+                <b-icon class="is-clickable" icon="chevron-down"></b-icon>
+            </div>
+        </div>
         <div class="media-content">
             <div class="media">
                 <div class="media-left" v-if="media && value.media">
@@ -30,20 +37,14 @@
                                target="_blank"
                                class="button is-text is-small">
                                 <b-icon icon="link" size="is-small"></b-icon>
-                                <span>{{value.meta.source.title}}</span>
+                                <span>{{value.meta.source.title.substring(0, 20)}}...</span>
                             </a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="media-right" v-if="vote">
-            <div class="vote" v-bind:class="{'is-active': value['vote_object']['is-voted']}">
-                <b-icon class="is-clickable" icon="chevron-up"></b-icon>
-                <div>{{value['vote_object']['total']}}</div>
-                <b-icon class="is-clickable" icon="chevron-down"></b-icon>
-            </div>
-        </div>
+
     </div>
 </template>
 

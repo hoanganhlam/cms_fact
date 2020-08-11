@@ -13,8 +13,5 @@
 </script>
 
 <style lang="scss">
-    .footer {
-        background-color: #fafafa;
-        padding: 3rem 1.5rem 3rem;
-    }
+
 </style>
