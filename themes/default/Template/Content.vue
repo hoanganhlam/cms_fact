@@ -21,7 +21,7 @@
                         <span v-if="description">{{value.description}}</span>
                         <n-link v-else :to="`/posts/${value.slug}`">{{value.description}}</n-link>
                     </h4>
-                    <div class="meta">
+                    <div class="meta" v-if="meta">
                         <div class="buttons">
                             <user avatar-size="is-16x16" :value="value.user"></user>
                             <n-link v-for="tax in taxPrimaries" :key="tax.id"
@@ -72,11 +72,18 @@
             hashTag: {
                 default: false,
                 type: Boolean
-            }
+            },
+            meta: {
+                default: false,
+                type: Boolean
+            },
         },
         computed: {
             taxPrimaries() {
-                return this.value['post_terms'].filter(x => x.taxonomy === 'object');
+                if (this.hashTag) {
+                    return this.value['post_terms'].filter(x => x.taxonomy === 'object');
+                }
+                return []
             }
         }
     }

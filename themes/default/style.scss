@@ -133,6 +133,10 @@ main.main {
     .navbar {
         border-bottom: 1px solid #DDD;
 
+        .container {
+            min-height: 2.25rem;
+        }
+
         .level {
             width: 100%;
         }

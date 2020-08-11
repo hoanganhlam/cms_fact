@@ -18,7 +18,7 @@
             </div>
         </div>
         <div class="facts">
-            <template-content vote media v-for="(post, i) in resPost.results" :key="i" :value="post"/>
+            <template-content meta hash-tag vote media v-for="(post, i) in resPost.results" :key="i" :value="post"/>
         </div>
         <div class="level is-mobile">
             <div class="level-left">

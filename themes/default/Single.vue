@@ -4,7 +4,7 @@
             <div class="column">
                 <div class="card">
                     <div class="card-content">
-                        <template-content :value="value" vote media description hash-tag/>
+                        <template-content meta :value="value" vote media description hash-tag/>
                         <comment-form/>
                     </div>
                 </div>
