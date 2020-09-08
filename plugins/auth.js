@@ -59,7 +59,7 @@ export default async function (context, inject) {
     };
     const init = async () => {
         let token = await getToken();
-        await setPublication();
+        // await setPublication();
         await setToken(token);
         if (token) {
             let user = await getUser();

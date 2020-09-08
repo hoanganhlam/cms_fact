@@ -15,7 +15,7 @@
                                 :to="`/${tax.taxonomy}/${tax.term.slug}`"
                                 class="tag">
                             <b-icon size="is-small" icon="pound"/>
-                            <span>{{tax.term.title}}</span>
+                            <span>{{ tax.term.title }}</span>
                         </n-link>
                     </div>
                 </div>
@@ -31,17 +31,17 @@
 </template>
 
 <script>
-    export default {
-        name: "Single",
-        props: {
-            value: {}
-        },
-        computed: {
-            taxHashTags() {
-                return this.value['post_terms'].filter(x => x.taxonomy === 'tag');
-            }
+export default {
+    name: "Single",
+    props: {
+        value: {}
+    },
+    computed: {
+        taxHashTags() {
+            return this.value['terms'].filter(x => x.taxonomy === 'tag');
         }
     }
+}
 </script>
 
 <style scoped>
